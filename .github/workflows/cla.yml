@@ -14,6 +14,8 @@ jobs:
         # Beta Release
         uses: contributor-assistant/github-action@v2.2.0
         env:
+          # CLA Action uses this in-built GitHub token to make the API calls for interacting with GitHub. 
+          # It is built into Github Actions and does not need to be manually specified in your secrets store.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # the below token should have repo scope and must be manually added by you in the repository's secret
           PERSONAL_ACCESS_TOKEN : ${{ secrets.PERSONAL_ACCESS_TOKEN }}
